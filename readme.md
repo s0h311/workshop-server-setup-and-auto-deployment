@@ -1,4 +1,4 @@
-# Workshop: Setup server and deploy app using Dokploy
+# Workshop: Server setup and auto-deployment using Dokploy
 
 ## Server
 
