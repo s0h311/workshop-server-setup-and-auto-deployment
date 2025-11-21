@@ -1,4 +1,4 @@
-# Workshop: Server setup and auto-deployment using Dokploy
+# Workshop: Server setup & Auto-Deployment using Dokploy
 
 ## Server
 
@@ -33,7 +33,7 @@ passwd <username>
 
 ```sh
 mkdir /home/<username>/.ssh;
-cp ~/.ssh/authorized_keys /home/<soheil>/.ssh/authorized_keys;
+cp ~/.ssh/authorized_keys /home/<username>/.ssh/authorized_keys;
 chown -R <username>:<username> /home/<username>;
 ```
 
@@ -49,3 +49,7 @@ ssh <username>@<server ip>;
 We want to secure server access by preventing SSH via username and password. And logging in as root user.
 
 #### Prevent username and password login
+
+### Firewall with ufw
+
+### Fail2Ban with CrowdSec
