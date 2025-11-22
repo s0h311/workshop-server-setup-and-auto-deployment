@@ -50,6 +50,42 @@ We want to secure server access by preventing SSH via username and password. And
 
 #### Prevent username and password login
 
+Set `PasswordAuthentication` in `/etc/ssh/sshd_config` to `no`
+
+using `vi`
+
+```
+%s/PasswordAuthentication yes/PasswordAuthentication no
+```
+
+using `sed`
+
+```sh
+sudo sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+```
+
+```
+-i[SUFFIX], --in-place[=SUFFIX]
+```
+
+Restart `ssh.service`
+
+```sh
+sudo service ssh restart
+```
+
+#### Prevent connecting as root user
+
+Set `PermitRootLogin` in `/etc/ssh/sshd_config` to `no`
+
+```sh
+sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
+```
+
+```sh
+sudo service ssh restart
+```
+
 ### Firewall with ufw
 
 ### Fail2Ban with CrowdSec
