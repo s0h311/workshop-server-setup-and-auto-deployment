@@ -2,7 +2,7 @@
 
 ## Server
 
-### User
+### Update packages
 
 1. Login to server
 
@@ -10,7 +10,16 @@
 ssh root@<server ip>
 ```
 
-2. Create user
+2. Update package index and update packages
+
+```sh
+apt update
+apt upgrade
+```
+
+### User
+
+1. Create user
 
 ```sh
 useradd <username> -m -U -G sudo -s /bin/bash
@@ -23,13 +32,13 @@ useradd <username> -m -U -G sudo -s /bin/bash
 -G, --groups GROUPS
 ```
 
-3. Set password for user
+2. Set password for user
 
 ```sh
 passwd <username>
 ```
 
-4. Enable SSH access to new user
+3. Enable SSH access to new user
 
 ```sh
 mkdir /home/<username>/.ssh;
@@ -37,7 +46,7 @@ cp ~/.ssh/authorized_keys /home/<username>/.ssh/authorized_keys;
 chown -R <username>:<username> /home/<username>;
 ```
 
-5. Ensure SSH access with new user
+4. Ensure SSH access with new user
 
 ```sh
 logout;
