@@ -21,8 +21,8 @@ ssh root@<server ip>
 2. Update package index and update packages
 
 ```sh
-apt update
-apt upgrade
+apt update;
+apt upgrade;
 ```
 
 ### User
@@ -68,14 +68,6 @@ We want to secure server access by preventing SSH via username and password. And
 #### Prevent username and password login
 
 Set `PasswordAuthentication` in `/etc/ssh/sshd_config` to `no`
-
-using `vi`
-
-```
-%s/PasswordAuthentication yes/PasswordAuthentication no
-```
-
-using `sed`
 
 ```sh
 sudo sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
@@ -142,9 +134,9 @@ sudo ufw enable;
 sudo ufw status;
 ```
 
-### Fail2Ban with CrowdSec
+### Malicious IP blocking with CrowdSec
 
--
+[https://doc.crowdsec.net/u/getting_started/installation/linux](https://doc.crowdsec.net/u/getting_started/installation/linux)
 
 ### Install Dokploy
 
