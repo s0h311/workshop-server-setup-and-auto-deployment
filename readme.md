@@ -141,3 +141,14 @@ sudo ufw status;
 ### Install Dokploy
 
 Continue on https://docs.dokploy.com/docs/core/installation
+
+## Features
+
+- Built-in Webserver (Traefik)
+- Docker
+- Auto deployments
+- SSL mit Let’s Encrypt
+- User management (2FA)
+- Git integration (Github, Gitlab, Bitbucket etc.)
+- Scheduled tasks
+- Multi environment support (production, test etc.)
