@@ -1,5 +1,13 @@
 # Workshop: Server setup & Auto-Deployment using Dokploy
 
+## Resources
+
+- https://youtu.be/F-9KWQByeU0?si=O-q_604Nd3RgAHQt
+- https://docs.dokploy.com/docs/core
+- https://docs.docker.com/engine/swarm/
+- https://youtu.be/ELkPcuO5ebo?si=N-shKOxHCwcGisRP
+- https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
+
 ## Server
 
 ### Update packages
@@ -97,4 +105,47 @@ sudo service ssh restart
 
 ### Firewall with ufw
 
+> When exposing ports with docker always specify the loopback interfaces ip: `127.0.0.1:80:80` instead of `80:80`. Because docker overrides `ufw` by updating `iptables`.
+
+## Install
+
+```sh
+sudo apt install ufw
+```
+
+## Apply default rules
+
+```sh
+sudo ufw default deny incoming;
+sudo ufw default allow outgoing;
+```
+
+## Allow OpenSSH on port 22
+
+```sh
+sudo ufw allow OpenSSH;
+sudo ufw show added;
+```
+
+## Allow ports 80 and 443
+
+```sh
+sudo ufw allow 80;
+sudo ufw allow 443;
+sudo ufw show added;
+```
+
+## Enable firewall
+
+```sh
+sudo ufw enable;
+sudo ufw status;
+```
+
 ### Fail2Ban with CrowdSec
+
+-
+
+### Install Dokploy
+
+Continue on https://docs.dokploy.com/docs/core/installation
