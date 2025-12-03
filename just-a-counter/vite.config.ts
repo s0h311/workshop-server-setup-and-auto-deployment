@@ -11,6 +11,9 @@ export default defineConfig({
     }),
   ],
   server: {
-    allowedHosts: ["justaproject-app-ysal6i-0566b0-46-224-50-130.traefik.me"],
+    allowedHosts: [
+      "justaproject-app-qkxfej-722b7f-46-224-50-130.traefik.me",
+      "justaproject-app-ysal6i-0566b0-46-224-50-130.traefik.me",
+    ],
   },
 });
