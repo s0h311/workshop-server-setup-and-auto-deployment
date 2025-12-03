@@ -4,7 +4,7 @@
 
 - https://youtu.be/F-9KWQByeU0?si=O-q_604Nd3RgAHQt
 - https://docs.dokploy.com/docs/core
-- https://docs.docker.com/engine/swarm/
+- https://docs.docker.com/engine/swarm/key-concepts/
 - https://youtu.be/ELkPcuO5ebo?si=N-shKOxHCwcGisRP
 - https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29
 
